@@ -9,7 +9,7 @@ class Solution(object):
         low = 0
         high = len(nums)-1
         while(low<=high):
-            if(nums[low]<nums[high]):
+            if(nums[low]<nums[high]): # perfectly sorted case
                 return nums[low]
             mid = low + (high-low)/2
             if((mid == 0 or nums[mid] < nums[mid-1]) and 
