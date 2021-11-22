@@ -6,7 +6,7 @@ class Solution(object):
         """
         rsum = 0
         maxValue = 0
-        hashMap = {0:-1} #in the hash map we will map rsum:index, {0:-1} for initial edge case of [1,0] 
+        hashMap = {0:-1} #in the hash map we will map rsum:index, {0:-1}, assume 0 rsum at index -1 for initial edge case of [1,0] 
         if(len(nums) == 0):
             return 0        
         for each in range(0,len(nums)):

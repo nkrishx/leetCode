@@ -52,5 +52,5 @@ here with sorting
                
             
        
-        return myDict.values()
+#        return myDict.values()
         

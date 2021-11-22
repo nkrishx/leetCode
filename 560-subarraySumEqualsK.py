@@ -9,7 +9,7 @@ class Solution(object):
             return 0
         rsum = 0
         count = 0
-        hashMap = {0:1}
+        hashMap = {0:1} # we store running some and number of occurances
         for each in nums:
             rsum = rsum + each
             difference = rsum - k
