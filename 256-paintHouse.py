@@ -3,12 +3,12 @@ class Solution:
         
         if not costs:
             return 0
-        cr = costs[len(costs)-1][0]
+        cr = costs[len(costs)-1][0] #these are for holding the values and not mutating the existing array list input
         cg = costs[len(costs)-1][1]
         cb = costs[len(costs)-1][2]
         
-        for i in range(len(costs)-2,-1,-1):
-            tempr = cr
+        for i in range(len(costs)-2,-1,-1): #we start from the penultimate index, we solve the sub problem bottom up
+            tempr = cr                      #temp to hold values before 
             tempg = cg
             cr = costs[i][0] + min(cb, cg)
             cg = costs[i][1] + min(cb, tempr)
