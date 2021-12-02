@@ -7,11 +7,13 @@
 class Solution(object):
     '''
     brute force method with inOrder traversal (left,right,root) is below
-    The same logic is replaced with the isValidBST fun here
+    The same logic is replaced with the inorder fun here
     under the hood the same mechanism happens
     '''
     def isValidBST(self, root):
-        self.prev = None
+        self.prev = None #we set globally since we need to comapre with global previous,
+                         #if we send a prev=null with each call then the stack will have a local scope previous value for 
+                         #each of the recursive calls
         
         return self.inorder(root)
     
