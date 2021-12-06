@@ -28,7 +28,7 @@ class Solution(object):
             inbound[val[0]] += 1 #increment the indgree for the node if it is dependent on the current prerequisite
             
         count = 0 
-        queue = deque()
+        queue = deque() #we can use a list too
         
         
         for i in range(len(inbound)): #add all independent nodes first into the queue
