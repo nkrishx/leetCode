@@ -7,7 +7,8 @@
 '''
 the idea is that we need to control the recurssion occuring,
 while in validating a BST we did a inorder traversal on the left of each and also on the right
-but here we will not do the right, we will give out the top of the stack as the next element when called. And to check if hasNext we check if stack is empty or not.
+but here we will not do the right, we will give out the top of the stack as the next element when called. 
+And to check if hasNext we check if stack is empty or not.
 We use a physical stack here. 
 Iterators basic idea is that it only needs to know about the next element, hence we control the right side.
 '''
