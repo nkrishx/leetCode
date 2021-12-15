@@ -1,14 +1,14 @@
 class Solution(object):
-    def helper(self, x , n):
-        if n == 0:
-            return 1
+    # def helper(self, x , n):
+    #     if n == 0:
+    #         return 1
         
-        temp = self.helper(x, n//2)
+    #     temp = self.helper(x, n//2)
         
-        if n%2 == 0:
-            return temp * temp
-        else:
-            return temp * temp * x
+    #     if n%2 == 0:
+    #         return temp * temp
+    #     else:
+    #         return temp * temp * x
         
     def myPow(self, x, n):
         """
@@ -25,15 +25,32 @@ class Solution(object):
         if even no need to multiply
         if negative then multiply with 1/x
         '''
+        # if n == 0:
+        #     return 1
+        
+        # if n > 0:
+        #     res = self.helper(x, n)
+            
+        # else:
+        #     res = self.helper(1/x, -n)
+            
+        # return res
+
+        #base
         if n == 0:
             return 1
         
-        if n > 0:
-            res = self.helper(x, n)
-            
+        #logic
+        temp = self.myPow(x, int(n/2))
+        
+        if n%2 == 0:
+            return temp * temp
         else:
-            res = self.helper(1/x, -n)
+            if n<0:
+                return temp * temp * (1/x)
+            else:
+                return temp * temp * x
             
-        return res
+        return
                 
         
